@@ -2,10 +2,50 @@
     width: 100%;
 }
 
+.navbar-inverse{
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #000000, #434343, #000000);
+  background: linear-gradient(to right, #000000, #434343, #000000);
+}
+
+.jumbotron{
+  background: #EFEFBB;
+  background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+  background: linear-gradient(to right, #D4D3DD, #EFEFBB);
+}
+
 .thumbnail {
     padding: 0;
 }
 
 .delete-form{
     display: inline
+}
+
+div.item i{
+  color: red;
+  -webkit-transform: translate(0,-100px) scale(0);
+      -ms-transform: translate(0,-100px) scale(0);
+          transform: translate(0,-100px) scale(0);
+  -webkit-transition: -webkit-transform 300ms 0ms ease-in-out;
+  transition: -webkit-transform 300ms 0ms ease-in-out;
+  -o-transition: transform 300ms 0ms ease-in-out;
+  transition: transform 300ms 0ms ease-in-out;
+  transition: transform 300ms 0ms ease-in-out, -webkit-transform 300ms 0ms ease-in-out;
+}
+
+div.item:hover img{
+  -webkit-filter: grayscale(85%);
+          filter: grayscale(85%);
+}
+
+div.item:hover i{
+  -webkit-transform: translate(0,-100px) scale(4);
+      -ms-transform: translate(0,-100px) scale(4);
+          transform: translate(0,-100px) scale(4);
+  -webkit-transition: -webkit-transform 300ms 100ms ease-in-out;
+  transition: -webkit-transform 300ms 100ms ease-in-out;
+  -o-transition: transform 300ms 100ms ease-in-out;
+  transition: transform 300ms 100ms ease-in-out;
+  transition: transform 300ms 100ms ease-in-out, -webkit-transform 300ms 100ms ease-in-out;
 }

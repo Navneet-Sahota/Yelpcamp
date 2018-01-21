@@ -13,7 +13,7 @@ body {
   color: #fff;
 }
 
-.slideshow { 
+.slideshow {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -25,7 +25,7 @@ body {
   padding: 0;
 }
 
-.slideshow li { 
+.slideshow li {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -36,37 +36,44 @@ body {
   background-repeat: no-repeat;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 50s linear infinite; 
+  -webkit-animation: imageAnimation 50s linear infinite;
+          animation: imageAnimation 50s linear infinite;
 }
 
-.slideshow li:nth-child(1) { 
-  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+.slideshow li:nth-child(1) {
+  background-image: url(http://i.imgur.com/K3mPv14.jpg)
 }
-.slideshow li:nth-child(2) { 
+.slideshow li:nth-child(2) {
   background-image: url(http://i.imgur.com/SBEmFpv.jpg);
-  animation-delay: 10s; 
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
-.slideshow li:nth-child(3) { 
+.slideshow li:nth-child(3) {
   background-image: url(http://i.imgur.com/emvhOnb.jpg);
-  animation-delay: 20s; 
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
 }
-.slideshow li:nth-child(4) { 
+.slideshow li:nth-child(4) {
   background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
-  animation-delay: 30s; 
+  -webkit-animation-delay: 30s;
+          animation-delay: 30s;
 }
-.slideshow li:nth-child(5) { 
+.slideshow li:nth-child(5) {
   background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
-  animation-delay: 40s; 
+  -webkit-animation-delay: 40s;
+          animation-delay: 40s;
 }
 
-@keyframes imageAnimation { 
-  0% { 
-    opacity: 0; 
-    animation-timing-function: ease-in;
+@-webkit-keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   10% {
     opacity: 1;
-    animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
   20% {
     opacity: 1
@@ -76,7 +83,21 @@ body {
   }
 }
 
-/* Older browser support - .no-cssanimations class added by modernizr */
-.no-cssanimations .slideshow li {
-	opacity: 1;
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
 }
