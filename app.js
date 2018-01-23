@@ -8,7 +8,8 @@ var express         = require("express"),
     passport        = require("passport"),
     localStrategy   = require("passport-local"),
     session         = require("express-session"),
-    methodOverride  = require("method-override");
+    methodOverride  = require("method-override"),
+    port            = process.env.PORT || 3000;
     
     
 //requring routes
@@ -49,6 +50,6 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(3000,function(){
+app.listen(port,function(){
     console.log("Server has started");
 });
